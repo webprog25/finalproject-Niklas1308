@@ -1,29 +1,32 @@
 Final Project Milestone
 ==============================
 
-Project Title: <TODO>
-Your Name: <TODO>
+Project Title: Coffee Tracker
+Your Name: Niklas Krenner
 
 Overview
 --------
-<TODO: Let me know how things are going. What have you explored, looked into, worked on, and tried so far? What do you have left to do? Are you running into any particular difficulties or blockers?>
+Bis jetzt habe ich einfach überlegt wie die Logik dahinter sein soll, daran werde ich noch ein wenig arbeiten, dass es nicht immer ein "bad" Shot ist und es vielleicht noch spezielle shots wie "Turboshots" (ganz schnelle aber trotzdem leckere shots) erkennt. 
+Dann habe ich auch schon etwas herum probiert mit den chart.js, da bin ich noch am chart gestalten und am überlegen wie ich diesen am besten einbaue, dass er auch aussagekräftig ist und sich was bringt.
 
 Project Changes
 ---------------
-<TODO: If you are planning to change something about your project (scope, features, etc.) from your proposal, please let me know what changes you're planning to make.>
+-
 
 Implementation Details
 ----------------------
-<TODO: Describe how you will implement (or have implemented) a specific feature or part of the project. Include specific details about the frontend (e.g. what classes you'll have and how the user interface will work) and backend (e.g. what API endpoints you'll use and how you'll store the data). As with the proposal, this can change later; I just want to make sure you've thought through some of these details.>
+Den chart werde ich mit Chart.js implementieren. Ich habe schon einen Graph im Kopf muss aber noch genau ausarbeiten wie die Parameter aussehen sollen und auch wie das Diagramm schlussendlich aussehen soll, eine Skizze habe ich schon und nach der werde ich mich ca. richten.
+Die Skizze ist ein Graph der über 3 Felder im Koordinatensystem geht und dies sind die 3 Geschmäcker "bitter", "sour", "sweet". Hier soll man dann auf dem Graph einen Punkt setzen können der den Geschmack repräsentiert. 
+
 
 External libraries and code
 ---------------------------
-<TODO: Identify any external libraries or code you are using or plan to use, and describe how it fits into your project. Please include everything even if you already listed it in your proposal.>
+Chart.js
 
 Collaboration and resources
 ---------------------------
-<TODO: Identify any sources you have consulted or plan to consult, except for code listed above. Include those you listed previously in your proposal.>
+Vielleicht werde ich auch ein schon bestehendes Geschmacksprofilchart nehmen wenn ich eins finde.
 
 Anything else?
 --------------
-<TODO: Anything else you'd like me to know?>
+-
