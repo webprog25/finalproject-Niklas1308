@@ -44,6 +44,14 @@ export default class Shot {
     this.ratioElem.textContent = "Ratio: 1:" + (this.output / this.input).toFixed(1) + "  (" + type + ")";
     this.notesElem.textContent = this.notes || "No notes";
 
+
+    const canvas = document.createElement("canvas");
+  canvas.width = 300;
+  canvas.height = 150;
+  canvas.style.marginTop = "10px";
+  this.element.appendChild(canvas);
+
+
   }
 
   updateCategory(newCategory) {
@@ -176,4 +184,5 @@ export default class Shot {
     form.addEventListener("submit", handleSubmit);
     cancelButton.addEventListener("click", handleCancel);
   }
+  
 }
