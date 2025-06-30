@@ -5,16 +5,16 @@
     <title>Espresso Shot Tracker</title>
     <script type="module" src="/lib/client/updater.js"></script>
     <script type="module" src="index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.1.0"></script>
+    
     
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600&display=swap" rel="stylesheet">
   </head>
 <body>
   <header>
     <h1>Espresso Shot Tracker</h1>
     <form id="addShot">
-      <input type= "text" name="bean" placeholder ="Bohnensorte" required>
+      <input type= "text" name="bean" placeholder ="Bohnensorte">
       <input type="number" name="input" placeholder="Input (g)" min= "0" step= "1" required>
       <input type="number" name= "output" placeholder="Output (g)" min= "0" step= "1" required>
       <input type="number" name="time" placeholder="Time (s)" min= "0" required>
@@ -28,10 +28,10 @@
 
   <div style="display: none;">
     <section class="column" id="good">
-      <h2 class="columnTitle">Good Shots</h2>
+      <h2 class="columnTitle">Good Shot</h2>
     </section>
     <section class="column" id="ok">
-      <h2 class="columnTitle">OK Shots</h2>
+      <h2 class="columnTitle">Okay Shot</h2>
     </section>
     <section class="column" id="bad">
       <h2 class="columnTitle">Needs Work</h2>
@@ -39,18 +39,50 @@
   </div>
 
   <template id="shotTemplate">
-    <article class="shot-card">
-      <h3 class="bean"></h3>
-      <p class="details"></p>
-      <p class="ratio"></p>
-      <p class= "notes"></p>
-      <div class="buttons">
-        <button class="edit">Edit</button>
-        <button class="move">Move</button>
-        <button class="delete">Delete</button>
+  <article class="shot-card">
+    <h3 class="bean"></h3>
+    <p class="details"></p>
+    <p class="ratio"></p>
+  
+    <textarea class="notes-display" readonly></textarea> 
+    
+    <form class="edit-form" style="display: none;">
+      <h3>Edit Shot</h3>
+      
+      <label>Bean: <input type="text" class="edit-bean"></label>
+      <label>Input (g): <input type="number" class="edit-input"></label>
+      <label>Output (g): <input type="number" class="edit-output"></label>
+      <label>Time (s): <input type="number" class="edit-time"></label>
+      
+      <label>Notes: <textarea class="edit-notes"></textarea></label>
+      
+      <h4>Taste Ratings (1-10)</h4>
+      <div class="ratings-container">
+        <label>Acidity: <input type="number" min="1" max="10" class="edit-acidity"></label>
+        <label>Sweetness: <input type="number" min="1" max="10" class="edit-sweetness"></label>
+        <label>Bitterness: <input type="number" min="1" max="10" class="edit-bitterness"></label>
+        <label>Body: <input type="number" min="1" max="10" class="edit-body"></label>
+        <label>Aroma: <input type="number" min="1" max="10" class="edit-aroma"></label>
+        <label>Aftertaste: <input type="number" min="1" max="10" class="edit-aftertaste"></label>
       </div>
-    </article>
-  </template>
+      
+      <div class="form-buttons">
+        <button type="button" class="save-btn">Save</button>
+        <button type="button" class="cancel-btn">Cancel</button>
+      </div>
+    </form>
+    
+    <div class="chart-container">
+      <canvas class="radar-chart"></canvas>
+    </div>
+    
+    <div class="buttons">
+      <button class="edit">Edit</button>
+      <button class="move">Move</button>
+      <button class="delete">Delete</button>
+    </div>
+  </article>
+</template>
   <script type="module" src="app.js"></script>
 </body>
 </html>

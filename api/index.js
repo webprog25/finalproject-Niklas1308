@@ -14,12 +14,10 @@ const initApi = async (app) => {
 api.use(bodyParser.json());
 api.use(cors());
 
-// Get all shots
 api.get("/shots", (req, res) => {
   res.json(shots);
 });
 
-// Add new shot
 api.post("/shots", (req, res) => {
   const { bean, input, output, time, notes } = req.body;
   
@@ -44,7 +42,6 @@ api.post("/shots", (req, res) => {
   res.status(201).json(newShot);
 });
 
-// Update shot
 api.patch("/shots/:id", (req, res) => {
   const { column, notes } = req.body;
   const shot = shots.find(s => s.id === req.params.id);
@@ -57,7 +54,6 @@ api.patch("/shots/:id", (req, res) => {
   res.json(shot);
 });
 
-// Delete shot
 api.delete("/shots/:id", (req, res) => {
   const index = shots.findIndex(s => s.id === req.params.id);
   
@@ -67,7 +63,6 @@ api.delete("/shots/:id", (req, res) => {
   res.status(204).end();
 });
 
-// Catch-all route
 api.all("/*", (req, res) => {
   res.status(404).json({ error: `Endpoint not found: ${req.method} ${req.url}` });
 });

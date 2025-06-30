@@ -11,15 +11,15 @@ export default class Evaluation {
     
     
     const categoryOptions = [
-      { key: "good", label: "Good Shot", color: "#4CAF50" },
-      { key: "ok", label: "OK Shot", color: "#FF9800" },
-      { key: "bad", label: "Needs Work", color: "#F44336" }
+      { key: "good", label: "Good Shot", color: "green" },
+      { key: "ok", label: "OK Shot", color: "orange" },
+      { key: "bad", label: "Needs Work", color: "red" }
     ];
     
     categoryOptions.forEach(option => {
       if (option.key !== this.movingCard.category) {
         const btn = document.createElement("button");
-        btn.textContent = "Move to" +  option.label;
+        btn.textContent = "Move to " +  option.label;
         btn.classList.add("moveHere");
         btn.style.borderColor = option.color;
         btn.style.color = option.color;

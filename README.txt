@@ -2,24 +2,24 @@
 Final Project
 ====================
 
-Project Title: <TODO>
-Your Name: <TODO>
+Project Title: Espresso Tracker
+Your Name: Niklas Krenner
 
 Overview
 --------
-<TODO: A short description of your project and what it does.>
-
-Running
--------
-<TODO: In general, I should be able to `npm install` and `npm start` your project. If there is anything else we need to know about running your project, please let us know here.>
-
-Do I need to load data from init_db.mongodb? <TODO: Yes/No>
+The Espresso tracker is designed to track your espresso shots. You can also make a taste graph, when editing you shot. This is to remember how it tasted and what you have to improve.
+It is really detailed and for real espresso nerds. I am going to use it for myself and append it with some extra features in the summer break. It should be able to connect to my bluetooth scale and my mod for my gaggia.
+The mod and the scale gives me every parameter and if I am able to do it with my rasperry pie, it should automatically give me the shot cards for every shot. This was also the reason why everything in the taste profile is set to 5 
+by default and is then changed later - because of that the notes and bean text is not required. 
 
 Features
 --------
-<TODO: This doesn't have to be a comprehensive list. But if there's anything I should definitely try or might miss, this is a good place to let me know about that.>
+The main features are that you can type in the parameters of the taste and it gives you a graph so you can remember and compare the taste.
 
 Collaboration and libraries
 ---------------------------
-<TODO: Identify any sources you have consulted or libraries/external code you used. If your project overlaps with another project or coursework for another class, please describe the overlap and the parts specific to you/lecture here.>
+I took the A03 assignment as a base for my project. I extended my original code and overworked it multipe times. At first i hade a Line Graph which i couldn't get working as i wanted to,
+then i swiched to the radar graph from charts.js. This was way easier and i did it without using any ai. The Line Graph was only working with the help of ai. I tried to not use ai in this project for a while but 
+caught myself using it a couple of times (Not really to copy and paste, to organize and learn how to do something). That didn't work out great and it got really complex and i didn't understand my code anymore. So a couple of days ago I completely rewrote my code now and only used 
+Ai to learn stuff and understand my problems in the code - there I only used it to search for information and to learn how to do it and then did it myself. Only the index.js file was done with a bit of chatgpt, otherwise I wouldn't have finished, because it was a bit too complicated for me.
 
